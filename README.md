@@ -1,32 +1,27 @@
 
+# PASAB
 
 
-```{comment}
----
-description: |
-     Alcian blue/periodic acid–Schiff,  Alcian blue/periodic acid–Schiff, patoloji, atlas, pathology, whole slide image
-date: last-modified
-categories: [ Alcian blue/periodic acid–Schiff,  Alcian blue/periodic acid–Schiff]
-page-layout: full
-bibliography: references.bib
----
+**PASAB for pathology atlas repositories**
+
+
+
 ```
-
-
-
-```{r language PASAB, echo=FALSE, include=TRUE}
+r language PASAB, echo=FALSE, include=TRUE
 source("./R/language.R")
 output_type <- knitr::opts_knit$get("rmarkdown.pandoc.to")
 ```
 
 
-```{asis  Alcian blue/periodic acid–Schiff TR , echo = (language == "TR")}
-## PASAB -  Alcian blue/periodic acid–Schiff {#sec-PASAB }
+```
+asis Alcian blue/periodic acid–Schiff TR, echo = (language == "TR")
+## PASAB - Alcian blue/periodic acid–Schiff {#sec-PASAB }
 ```
 
 
-```{asis  Alcian blue/periodic acid–Schiff EN , echo = (language == "EN")}
-## PASAB -  Alcian blue/periodic acid–Schiff {#sec-PASAB }
+```
+asis Alcian blue/periodic acid–Schiff EN, echo = (language == "EN")
+## PASAB - Alcian blue/periodic acid–Schiff {#sec-PASAB }
 ```
 
 
@@ -34,7 +29,8 @@ output_type <- knitr::opts_knit$get("rmarkdown.pandoc.to")
 
 
 
-```{r PASAB screenshot PASAB, eval=TRUE, include=FALSE}
+```
+r PASAB screenshot PASAB, eval=TRUE, include=FALSE
 if (!file.exists("./screenshots/thumbnail_PASAB-PASAB.png")) {
 webshot2::webshot(
   url = "https://images.patolojiatlasi.com/PASAB/PASAB.html",
@@ -42,25 +38,6 @@ webshot2::webshot(
 )
 }
 ```
-
-
-
-```{r PASAB qrcode PASAB, eval=TRUE, echo=FALSE, include=FALSE, error=TRUE}
-if (!file.exists("./qrcodes/PASAB-PASAB_qrcode.svg")) {
-
-  qrcode_svg <- qrcode::qr_code("https://images.patolojiatlasi.com/PASAB/PASAB.html")
-
-  qrcode::generate_svg(qrcode = qrcode_svg,
-                       filename = "./qrcodes/PASAB-PASAB_qrcode.svg",
-                       show = FALSE)
-}
-```
-
-
-
-
-
-
 
 
 
@@ -78,66 +55,31 @@ if (!file.exists("./qrcodes/PASAB-PASAB_qrcode.svg")) {
 
 
 
-:::: {.content-hidden when-format="pdf"}
 
 
-```{asis, echo = (language == "TR")}
+[https://images.patolojiatlasi.com/PASAB/PASAB.html](https://images.patolojiatlasi.com/PASAB/PASAB.html)
 
-** Alcian blue/periodic acid–Schiff**
+
+
+
+
+```
+asis, echo = (language == "TR")
+
+**Alcian blue/periodic acid–Schiff**
 
 
 [![Tam Ekran Görmek İçin Resmi Tıklayın](./screenshots/thumbnail_PASAB-PASAB.png){width="25%"}](https://images.patolojiatlasi.com/PASAB/PASAB.html) [Tam Ekran Görmek İçin Resmi Tıklayın](https://images.patolojiatlasi.com/PASAB/PASAB.html)
-
 ```
 
-::::
-
-
-:::: {.content-visible when-format="pdf"}
-
-```{asis, echo = (language == "TR")}
-
-** Alcian blue/periodic acid–Schiff**
-
-![](./qrcodes/PASAB-PASAB_qrcode.svg){width="15%"} [![Tam Ekran Görmek İçin Resmi Tıklayın](./screenshots/thumbnail_PASAB-PASAB.png){width="25%"}](https://images.patolojiatlasi.com/PASAB/PASAB.html) [Tam Ekran Görmek İçin Resmi Tıklayın](https://images.patolojiatlasi.com/PASAB/PASAB.html)
-
 ```
+asis, echo = (language == "EN")
 
-
-
-::::
-
-
-
-
-:::: {.content-hidden when-format="pdf"}
-
-
-```{asis, echo = (language == "EN")}
-
-** Alcian blue/periodic acid–Schiff**
+**Alcian blue/periodic acid–Schiff**
 
 [![Click for Full Screen WSI](./screenshots/thumbnail_PASAB-PASAB.png){width="25%"}](https://images.patolojiatlasi.com/PASAB/PASAB.html) [Click for Full Screen WSI](https://images.patolojiatlasi.com/PASAB/PASAB.html)
 
 ```
-
-::::
-
-
-:::: {.content-visible when-format="pdf"}
-
-```{asis, echo = (language == "EN")}
-
-** Alcian blue/periodic acid–Schiff**
-
-![](./qrcodes/PASAB-PASAB_qrcode.svg){width="15%"} [![Click for Full Screen WSI](./screenshots/thumbnail_PASAB-PASAB.png){width="25%"}](https://images.patolojiatlasi.com/PASAB/PASAB.html) [Click for Full Screen WSI](https://images.patolojiatlasi.com/PASAB/PASAB.html)
-
-```
-
-
-::::
-
-
 
 
 
@@ -152,7 +94,8 @@ if (!file.exists("./qrcodes/PASAB-PASAB_qrcode.svg")) {
 
 
 
-```{asis, echo = ((language=="TR") & (output_type=="html"))}
+```
+asis, echo = ((language=="TR") & (output_type=="html"))
 Mikroskopik görüntüleri inceleyin:
 
 <iframe src="https://images.patolojiatlasi.com/PASAB/PASAB.html" style="height:600px;width:100%;" data-external="1"></iframe>
@@ -163,7 +106,8 @@ Mikroskopik görüntüleri inceleyin:
 
 
 
-```{asis, echo = ((language == "EN") & (output_type=="html"))}
+```
+asis, echo = ((language == "EN") & (output_type=="html"))
 
 See Microscopy with viewer:
 
