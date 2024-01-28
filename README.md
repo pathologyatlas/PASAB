@@ -1,227 +1,161 @@
-# template
-
-
-**template for pathology atlas repositories**
-
-
-```
-see [make-html-WSI](https://github.com/pathologyatlas/make-html-WSI) for more information and [TODO](https://github.com/pathologyatlas/TODO) to add cases
-```
-
-```
-In this README file replace the following:
-TemplateEN with description of file in English
-TemplateTR with description of file in Turkish
-template with repository name
-
-```
-
-
-```
-update html file <head>
-
-<title>TemplateEN templateTR</title>
-
-<meta name="keywords" content="TemplateEN, templateTR, patoloji, atlas, pathology, whole slide image">
-
-<meta name="description" content="TemplateEN templateTR">
-
-```
 
 
 
-```zsh
-
-vips dzsave HE.svs HE
-
-```
-
-
-
-```
-update html file to match .dzi file
-
-```
-
-
-```
-add to begining of qmd page
-
+```{comment}
 ---
 description: |
-    TemplateEN
-    TemplateTR
+     Alcian blue/periodic acid–Schiff,  Alcian blue/periodic acid–Schiff, patoloji, atlas, pathology, whole slide image
 date: last-modified
-categories: [template]
+categories: [ Alcian blue/periodic acid–Schiff,  Alcian blue/periodic acid–Schiff]
 page-layout: full
 bibliography: references.bib
 ---
-
 ```
 
 
 
-> consider using git_push.sh script to upload files to github, since the number of generated files is huge
-
-> after upload complete, do not forget to activate github pages for the new repository
-
-
-
-```{r language template, echo=FALSE, include=TRUE}
+```{r language PASAB, echo=FALSE, include=TRUE}
 source("./R/language.R")
 output_type <- knitr::opts_knit$get("rmarkdown.pandoc.to")
 ```
 
 
-
-
-```{asis, echo = (language == "TR")}
-## TemplateTR {#sec-template}
+```{asis  Alcian blue/periodic acid–Schiff TR , echo = (language == "TR")}
+## PASAB -  Alcian blue/periodic acid–Schiff {#sec-PASAB }
 ```
 
 
-```{asis, echo = (language == "EN")}
-## TemplateEN {#sec-template}
+```{asis  Alcian blue/periodic acid–Schiff EN , echo = (language == "EN")}
+## PASAB -  Alcian blue/periodic acid–Schiff {#sec-PASAB }
 ```
 
 
-```{r template screenshot, eval=TRUE, include=FALSE}
-if (!file.exists("./screenshots/thumbnail_template.png")) {
+
+
+
+
+```{r PASAB screenshot PASAB, eval=TRUE, include=FALSE}
+if (!file.exists("./screenshots/thumbnail_PASAB-PASAB.png")) {
 webshot2::webshot(
-  url = "https://images.patolojiatlasi.com/template/HE.html",
-  file = "./screenshots/thumbnail_template.png"
+  url = "https://images.patolojiatlasi.com/PASAB/PASAB.html",
+  file = "./screenshots/thumbnail_PASAB-PASAB.png"
 )
 }
 ```
 
-```{comment, echo=FALSE, include=FALSE, eval=FALSE}
-knitr::include_url(url = "https://images.patolojiatlasi.com/template/HE.html")
+
+
+```{r PASAB qrcode PASAB, eval=TRUE, echo=FALSE, include=FALSE, error=TRUE}
+if (!file.exists("./qrcodes/PASAB-PASAB_qrcode.svg")) {
+
+  qrcode_svg <- qrcode::qr_code("https://images.patolojiatlasi.com/PASAB/PASAB.html")
+
+  qrcode::generate_svg(qrcode = qrcode_svg,
+                       filename = "./qrcodes/PASAB-PASAB_qrcode.svg",
+                       show = FALSE)
+}
 ```
 
-```{comment, echo=FALSE, include=FALSE, eval=FALSE}
-#| label: template_screenshot
-#| fig-cap: "TemplateTR"
-knitr::include_graphics("./screenshots/thumbnail_template.png")
-```
 
 
-::: {.content-hidden when-format="html"}
-TemplateTR
-:::
 
-::: {.content-visible when-format="pdf"}
-TemplateTR
-:::
 
+
+
+
+
+
+
+::::: panel-tabset
+
+
+### WSI - Link
+
+
+
+
+
+
+
+
+:::: {.content-hidden when-format="pdf"}
 
 
 ```{asis, echo = (language == "TR")}
 
-**templateTR**
+** Alcian blue/periodic acid–Schiff**
 
 
-[![Tam Ekran Görmek İçin Resmi Tıklayın](./screenshots/thumbnail_template.png){width="25%"}](https://images.patolojiatlasi.com/template/HE.html) [Tam Ekran Görmek İçin Resmi Tıklayın](https://images.patolojiatlasi.com/template/HE.html)
+[![Tam Ekran Görmek İçin Resmi Tıklayın](./screenshots/thumbnail_PASAB-PASAB.png){width="25%"}](https://images.patolojiatlasi.com/PASAB/PASAB.html) [Tam Ekran Görmek İçin Resmi Tıklayın](https://images.patolojiatlasi.com/PASAB/PASAB.html)
+
 ```
+
+::::
+
+
+:::: {.content-visible when-format="pdf"}
+
+```{asis, echo = (language == "TR")}
+
+** Alcian blue/periodic acid–Schiff**
+
+![](./qrcodes/PASAB-PASAB_qrcode.svg){width="15%"} [![Tam Ekran Görmek İçin Resmi Tıklayın](./screenshots/thumbnail_PASAB-PASAB.png){width="25%"}](https://images.patolojiatlasi.com/PASAB/PASAB.html) [Tam Ekran Görmek İçin Resmi Tıklayın](https://images.patolojiatlasi.com/PASAB/PASAB.html)
+
+```
+
+
+
+::::
+
+
+
+
+:::: {.content-hidden when-format="pdf"}
+
+
+```{asis, echo = (language == "EN")}
+
+** Alcian blue/periodic acid–Schiff**
+
+[![Click for Full Screen WSI](./screenshots/thumbnail_PASAB-PASAB.png){width="25%"}](https://images.patolojiatlasi.com/PASAB/PASAB.html) [Click for Full Screen WSI](https://images.patolojiatlasi.com/PASAB/PASAB.html)
+
+```
+
+::::
+
+
+:::: {.content-visible when-format="pdf"}
+
+```{asis, echo = (language == "EN")}
+
+** Alcian blue/periodic acid–Schiff**
+
+![](./qrcodes/PASAB-PASAB_qrcode.svg){width="15%"} [![Click for Full Screen WSI](./screenshots/thumbnail_PASAB-PASAB.png){width="25%"}](https://images.patolojiatlasi.com/PASAB/PASAB.html) [Click for Full Screen WSI](https://images.patolojiatlasi.com/PASAB/PASAB.html)
+
+```
+
+
+::::
+
+
+
+
+
+
+
+### WSI
+
+
+
+
+
+
 
 
 ```{asis, echo = ((language=="TR") & (output_type=="html"))}
 Mikroskopik görüntüleri inceleyin:
 
-<iframe src="https://images.patolojiatlasi.com/template/HE.html" style="height:600px;width:100%;" data-external="1"></iframe>
-
-```
-
-
-
-```{comment} 
-asis, echo = (language == "TR")
-
-**templateTR**
-
-
-[![İşaretlenmiş mikroskopik görüntüleri Tam Ekran Görmek İçin Resmi Tıklayın](./screenshots/thumbnail_template.png){width="25%"}](https://images.patolojiatlasi.com/template/HE_annotated.html) [İşaretlenmiş mikroskopik görüntüleri Tam Ekran Görmek İçin Resmi Tıklayın](https://images.patolojiatlasi.com/template/HE_annotated.html)
-```
-
-```{comment} 
-asis, echo = ((language=="TR") & (output_type=="html"))
-
-İşaretlenmiş mikroskopik görüntüleri inceleyin:
-
-<iframe src="https://images.patolojiatlasi.com/template/HE_annotated.html" style="height:600px;width:100%;" data-external="1"></iframe>
-
-```
-
-
-
-```{comment}
-asis, echo = (language == "TR")
-
-
-::: {.callout-tip collapse="true" appearance="default" icon="true"}
-### Tanı için tıklayın
-
-{{TemplateTR}}
-
-:::
-
-
-
-```
-
-
-```{asis, echo = (language == "EN")}
-
-**templateEN**
-
-[![Click for Full Screen WSI](./screenshots/thumbnail_template.png){width="25%"}](https://images.patolojiatlasi.com/template/HE.html) [Click for Full Screen WSI](https://images.patolojiatlasi.com/template/HE.html)
-
-
-```
-
-
-
-```{asis, echo = ((language == "EN") & (output_type=="html"))} 
-
-See Microscopy with viewer: 
-
-<iframe src="https://images.patolojiatlasi.com/template/HE.html" style="height:600px;width:100%;" data-external="1"></iframe>
-
-```
-
-
-```{comment}
-asis, echo = (language == "EN")
-
-**templateEN**
-
-[![Click for Full Screen Annotated WSI](./screenshots/thumbnail_template.png){width="25%"}](https://images.patolojiatlasi.com/template/HE_annotated.html) [Click for Full Screen Annotated WSI](https://images.patolojiatlasi.com/template/HE_annotated.html)
-```
-
-
-
-```{comment}
-asis, echo = ((language=="EN") & (output_type=="html"))
-
-See Annotated Microscopy with viewer: 
-
-<iframe src="https://images.patolojiatlasi.com/template/HE_annotated.html" style="height:600px;width:100%;" data-external="1"></iframe>
-
-```
-
-
-
-
-```{comment}
-asis, echo = (language == "EN")
-
-::: {.callout-tip collapse="true" appearance="default" icon="true"}
-### Tanı için tıklayın
-
-{{TemplateEN}}
-
-:::
-
-
+<iframe src="https://images.patolojiatlasi.com/PASAB/PASAB.html" style="height:600px;width:100%;" data-external="1"></iframe>
 
 ```
 
@@ -229,26 +163,28 @@ asis, echo = (language == "EN")
 
 
 
-```{asis, echo = (language == "TR")}
+```{asis, echo = ((language == "EN") & (output_type=="html"))}
 
-[Video İçin Tıklayın](https://www.youtube.com/watch?v=)
+See Microscopy with viewer:
 
-```
-
-
-```{asis, echo = (language == "EN")}
-
-[Click for Video](https://www.youtube.com/watch?v=)
+<iframe src="https://images.patolojiatlasi.com/PASAB/PASAB.html" style="height:600px;width:100%;" data-external="1"></iframe>
 
 ```
 
 
 
-::: {.content-visible when-format="html"}
 
-{{< video https://www.youtube.com/embed/ >}}
 
-:::
+
+:::::
+
+
+
+
+
+
+
+
 
 
 
